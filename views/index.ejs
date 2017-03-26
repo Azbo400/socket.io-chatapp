@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/css/basic/emojify.min.css" />
+    <link rel='stylesheet' href='/css/main.css' />
+    <link href="/css/nanoscroller.css" rel="stylesheet">
+    <link href="/css/emoji.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="headers">
+      <h1 class="header">Socket.IO Chat App</h1>
+      <h3 class="header">By: <a href="https://azbo400.github.io" target="_blank">Ryan A</a></h3>
+    </div>
+    <div class="online">
+      <ul id="onlineusers"></ul>
+    </div>
+    <ul id="messages"></ul>
+    <form action="">
+      <input data-emojiable="true" class="textbox" id="m" autocomplete="off" placeholder="Type here to compose a message supports markdown and emojies"/><button>Send</button>
+    </form>
+    
+    <div class="wdt-emoji-popup">
+      <a href="#" class="wdt-emoji-popup-mobile-closer"> × </a>
+      <div class="wdt-emoji-menu-content">
+        <div id="wdt-emoji-menu-header">
+          <a class="wdt-emoji-tab active" data-group-name="Recent"></a>
+          <a class="wdt-emoji-tab" data-group-name="People"></a>
+          <a class="wdt-emoji-tab" data-group-name="Nature"></a>
+          <a class="wdt-emoji-tab" data-group-name="Foods"></a>
+          <a class="wdt-emoji-tab" data-group-name="Activity"></a>
+          <a class="wdt-emoji-tab" data-group-name="Places"></a>
+          <a class="wdt-emoji-tab" data-group-name="Objects"></a>
+          <a class="wdt-emoji-tab" data-group-name="Symbols"></a>
+          <a class="wdt-emoji-tab" data-group-name="Flags"></a>
+          <a class="wdt-emoji-tab" data-group-name="Custom"></a>
+        </div>
+        <div class="wdt-emoji-scroll-wrapper">
+          <div id="wdt-emoji-menu-items">
+            <input id="wdt-emoji-search" type="text" placeholder="Search">
+            <h3 id="wdt-emoji-search-result-title">Search Results</h3>
+            <div class="wdt-emoji-sections"></div>
+            <div id="wdt-emoji-no-result">No emoji found</div>
+          </div>
+        </div>
+        <div id="wdt-emoji-footer">
+          <div id="wdt-emoji-preview">
+            <span id="wdt-emoji-preview-img"></span>
+            <div id="wdt-emoji-preview-text">
+              <span id="wdt-emoji-preview-name"></span><br>
+              <span id="wdt-emoji-preview-aliases"></span>
+            </div>
+          </div>
+          <div id="wdt-emoji-preview-bundle">
+            <span>WDT Emoji Bundle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/js/emojify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/emojione/2.2.7/lib/js/emojione.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/emojione/2.2.7/assets/css/emojione.min.css"/>
+    <script type="text/javascript" src="emoji.min.js"></script>
+    <script type="text/javascript" src="wdt-emoji-bundle.min.js"></script>
+    <script src="/js/client.js" type="text/javascript"></script>
+    <!--emoji picker stuff-->
+    <script src="/js/nanoscroller.min.js"></script>
+    <script src="/js/tether.min.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/jquery.emojiarea.js"></script>
+    <script src="/js/emoji-picker.js"></script>
+  </body>
+</html>
